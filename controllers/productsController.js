@@ -2,7 +2,7 @@ import Product from "../models/productsModel.js";
 
 export const getAllProducts = async (req, res) => {
   const currentPage = req.query.page || 1;
-  const perPage = req.query.perPage || 5;
+  const perPage = req.query.perPage || 10;
 
   let query = {};
   query.offset = (parseInt(currentPage) - 1) * parseInt(perPage);
